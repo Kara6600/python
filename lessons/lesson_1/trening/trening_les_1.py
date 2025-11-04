@@ -26,6 +26,8 @@ print_letter('е')
 print_letter('н')
 print_letter('т')
 
+
+# команда для обновы на гите  git push origin main
 #def num(let):
    #print(let, end='')
 
