@@ -31,3 +31,33 @@ def test_replace_spaces():
 # Более сложные сценарии (например, с другими символами)
 def test_replace_spaces_custom_char():
     assert StringUtils.replace_spaces("hello world", "-") == "hello-world"
+
+# 6. Тест для capitalize_text с None (негативный сценарий)
+def test_capitalize_text_none():
+    assert StringUtils.capitalize_text(None) is None
+
+# 7. Тест для add_period с None (негативный сценарий)
+def test_add_period_none():
+    assert StringUtils.add_period(None) is None
+
+# 8. Тест для replace_spaces с None (негативный сценарий)
+def test_replace_spaces_none():
+    assert StringUtils.replace_spaces(None) is None
+
+# 9. Тест для capitalize_text с входным списком (негативный)
+def test_capitalize_text_list():
+    import pytest
+    with pytest.raises(TypeError):
+        StringUtils.capitalize_text(["hello"])
+
+# 10. Тест для add_period с входным списком (негативный)
+def test_add_period_list():
+    import pytest
+    with pytest.raises(TypeError):
+        StringUtils.add_period(["hello"])
+
+# 11. Тест для replace_spaces с входным списком (негативный)
+def test_replace_spaces_list():
+    import pytest
+    with pytest.raises(TypeError):
+        StringUtils.replace_spaces(["hello world"])
