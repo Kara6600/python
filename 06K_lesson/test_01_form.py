@@ -3,26 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-class StringUtils:
-    @staticmethod
-    def add_period(text: str) -> str:
-        if not isinstance(text, str):
-            raise TypeError("text must be a str")
-        if not text:
-            return "."
-        if not text.endswith('.'):
-            text += '.'
-        return text
-
-    @staticmethod
-    def replace_spaces(text: str, char: str = "_") -> str:
-        if not isinstance(text, str):
-            raise TypeError("text must be a str")
-        if not text:
-            return ""
-        return text.replace(" ", char)
-
-
 @pytest.fixture
 def driver():
     options = webdriver.EdgeOptions()

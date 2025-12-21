@@ -42,7 +42,7 @@ def test_slow_calculator_with_delay(driver):
         EC.element_to_be_clickable(
             (
                 By.XPATH,
-                "//span[@class='operator btn btn-outline-success' and"
+                "//span[@class='operator btn btn-outline-success' and "
                 "text()='+']"
             )
         )
@@ -52,7 +52,7 @@ def test_slow_calculator_with_delay(driver):
         EC.element_to_be_clickable(
             (
                 By.XPATH,
-                "//span[@class='btn btn-outline-primary' and"
+                "//span[@class='btn btn-outline-primary' and "
                 "text()='8']"
             )
         )
