@@ -66,10 +66,11 @@ def test_form_submission(driver):
                 return False
         print("Строка не в ожидаемом формате:", rgb_string)
         return False
-        # Проверка
-        zip_code_elem = driver.find_element(By.ID, "zip-code")
-        zip_border_color = get_border_color(zip_code_elem)
-        assert is_exact_color(zip_border_color), \
+
+    # Проверка
+    zip_code_elem = driver.find_element(By.ID, "zip-code")
+    zip_border_color = get_border_color(zip_code_elem)
+    assert is_exact_color(zip_border_color), \
             (
              f"Zip code должно быть подсвечено точно цветом"
              f"rgb(245, 194, 199),получено: {zip_border_color}"
@@ -99,11 +100,10 @@ def test_form_submission(driver):
                 return g > r + 20 and g > b + 20 and r < 200 and b < 200
             except ValueError:
                 return False
-    return False
-    for field_id, value in fields.items():
-        elem = driver.find_element(By.ID, field_id)
-        color = get_border_color(elem).replace(" ", "")
-        assert is_green_shade(color), \
+        for field_id, value in fields.items():
+         elem = driver.find_element(By.ID, field_id)
+         color = get_border_color(elem).replace(" ", "")
+         assert is_green_shade(color), \
             (
                 f"Поле {field_id} должно быть подсвечено зеленым,"
                 f" текущий цвет: {color}"
