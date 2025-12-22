@@ -125,6 +125,6 @@ def test_form_submission(driver):
         color = get_border_color(elem).replace(" ", "")
         assert is_green_shade(color), \
             (
-                f"Поле {field_id} должно быть подсвечено зеленым,"
+                f"Поле {field_id} должно быть подсвечено зeленым,"
                 f" текущий цвет: {color}"
             )
